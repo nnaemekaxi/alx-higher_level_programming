@@ -10,7 +10,7 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     funcs = [add, sub, mul, div]
     for x, y in enumerate(ops):
-        if argv[2] == s:
+        if argv[2] == y:
             print("{} {} {} = {}".format(a, y, b, funcs[x](a, b)))
             break
     else:
