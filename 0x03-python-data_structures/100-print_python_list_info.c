@@ -14,7 +14,7 @@ void print_python_list_info(PyObject *p)
       printf("[*] Size of the Python List = %ld\n", size);
       printf("[*] Allocated = %ld\n", list->allocated);
       x = 0;
-      while (x < size;)
+      while (x < size)
 	{
 	  object = list->ob_item[x];
 	  type = object->ob_type;
