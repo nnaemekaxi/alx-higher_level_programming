@@ -65,7 +65,7 @@ void print_python_bytes(PyObject *p)
 {
   Py_ssize_t size_bytes;
   char *buffer;
-  long int x;
+  long int i;
 
   printf("[.] bytes object info\n");
   fflush(stdout);
@@ -89,15 +89,13 @@ void print_python_bytes(PyObject *p)
       size_bytes = 10;
     }
   fflush(stdout);
-  x = 0;
-  while (x <= size_bytes && x < 10)
+  for (i = 0; i <= size_bytes && i < 10; i++)
     {
-      if (buffer[x])
-	printf(" %02x", buffer[x] & 0xff);
+      if (buffer[i])
+	printf(" %02x", buffer[i] & 0xff);
       else
 	printf(" 00");
       fflush(stdout);
-    x++;
     }
   printf("\n");
 }
